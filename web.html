@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Suralokazoo</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
   <nav class="navbar">
@@ -22,10 +23,42 @@
   <section class="hero">
     <div class="overlay"></div>
     <img src="image/suralokazoo.jpg" alt="Suralokazoo" class="hero-img">
-    <div class="hero-text">
+    <div class="hero-text" data-aos="fade-down">
       <h1>Selamat Datang di Suralokazoo</h1>
       <p>Tempat edukasi dan petualangan yang seru!</p>
     </div>
   </section>
+
+  <section class="about" id="tentang">
+    <div class="about-container" data-aos="fade-up">
+      <div class="about-text">
+        <h2>Tentang Suralokazoo</h2>
+        <p>
+          Suraloka Interactive Zoo adalah kebun binatang interaktif yang berlokasi di kawasan wisata Kaliurang, Sleman, Yogyakarta. 
+          Di sini, pengunjung bisa berinteraksi langsung dengan hewan-hewan lucu seperti kelinci, domba, burung, dan bahkan alpaka yang menggemaskan.
+        </p>
+        <p>
+          Dengan suasana pegunungan yang sejuk dan udara segar, Suralokazoo menggabungkan hiburan dan edukasi 
+          untuk anak-anak dan keluarga. Selain itu, ada juga area bermain, spot foto estetik, dan kafe nyaman untuk bersantai.
+        </p>
+        <p>
+          Suralokazoo buka setiap hari pukul <strong>09.00 – 17.00 WIB</strong> dan menjadi destinasi sempurna 
+          untuk liburan keluarga yang menyenangkan dan mendidik.
+        </p>
+      </div>
+
+      <div class="about-image" data-aos="zoom-in">
+        <img src="image/suralokazoo.jpg" alt="Tentang Suralokazoo">
+      </div>
+    </div>
+  </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
