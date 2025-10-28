@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background-color: rgb(237, 217, 183); /* Yosemite Ivory */
+  color: rgb(53, 51, 38); /* Granite Shadows */
+}
+
+/* === Navbar === */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 100;
+  background: rgba(53, 51, 38, 0.85); /* Granite Shadows semi transparan */
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 25px;
+}
+
+.navbar ul li a {
+  color: rgb(237, 217, 183); /* Ivory */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: rgb(239, 213, 149); /* Summit Blush */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.logo-text {
+  color: rgb(237, 217, 183);
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* === Hero Section === */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end; /* geser isi ke kanan */
+  align-items: center; /* tetap tengah vertikal */
+  padding-right: 10%; /* jarak dari kanan biar gak nempel */
+}
+
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(53, 51, 38, 0.5); /* overlay warna granite shadows transparan */
+  z-index: 2;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 3;
+  color: rgb(237, 217, 183); /* Yosemite Ivory */
+  text-align: right; /* teks rata kanan biar nyatu sama posisinya */
+  max-width: 500px;
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  color: rgb(239, 213, 149); /* Summit Blush */
+}
+
+/* Animasi lembut masuk dari kanan */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center; /* di HP balik ke tengah */
+    padding-right: 0;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+}
+
+/* === Section Tentang === */
+.about {
+  height: 100vh;
+  background-color: rgb(237, 217, 231); /* Mistflower */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.about-container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-text {
+  flex: 1;
+  color: rgb(53, 51, 38);
+}
+
+.about-text h2 {
+  font-size: 48px;
+  margin-bottom: 25px;
+  color: rgb(137, 126, 69); /* Valley Moss */
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+/* === Section Peta === */
+.map-section {
+  background-color: rgb(237, 217, 183); /* Yosemite Ivory */
+  padding: 100px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.map-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.map-image img {
+  width: 100%;
+  max-width: 550px;
+  border-radius:  0;
+  box-shadow: none;
+  object-fit: cover;
+}
+
+.map-info {
+  flex: 1;
+  color: rgb(53, 51, 38);
+}
+
+.map-info h2 {
+  font-size: 42px;
+  color: rgb(137, 126, 69); /* Valley Moss */
+  margin-bottom: 20px;
+}
+
+.map-info p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* === Tombol Download === */
+.btn-download {
+  display: inline-block;
+  background-color: rgb(196, 109, 82); /* Meadow Bloom */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-download:hover {
+  background-color: rgb(239, 213, 149); /* Summit Blush */
+  color: rgb(53, 51, 38);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .about-container, .map-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img, .map-image img {
+    max-width: 350px;
+  }
+}
+
+.team {
+  background: linear-gradient(180deg, #2c2a23 0%, #3a382f 100%);
+  color: rgb(237, 217, 183);
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: rgb(239, 213, 149);
+}
+
+.team-subtext {
+  font-size: 18px;
+  margin-bottom: 60px;
+  color: rgb(229, 211, 174);
+}
+
+.team-group h3 {
+  margin: 40px 0 25px;
+  font-size: 26px;
+  color: rgb(239, 213, 149);
+}
+
+.team-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Card */
+.team-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 25px 20px;
+  width: 200px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(239, 213, 149, 0.25);
+}
+
+/* Foto profil */
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid rgb(239, 213, 149);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.07);
+}
+
+/* Teks */
+.team-card h4 {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.team-card p {
+  font-size: 15px;
+  color: rgb(239, 213, 149);
+}
+
+/* Animasi tambahan */
+[data-aos="zoom-in"] {
+  transition-timing-function: ease-out-back;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .team-card {
+    width: 160px;
+  }
+  .team h2 {
+    font-size: 32px;
+  }
+  .team-group h3 {
+    font-size: 22px;
+  }
+}
