@@ -5,12 +5,13 @@
 }
 
 body {
-  font-family: Poppins, sans-serif;
-  background-color: rgb(237, 217, 183); /* Yosemite Ivory */
-  color: rgb(53, 51, 38); /* Granite Shadows */
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #edd9b7;
+  padding-top: 80px ;
 }
 
-/* === Navbar === */
+/* ============ Navbar ============ */
 .navbar {
   position: fixed;
   top: 0;
@@ -23,6 +24,24 @@ body {
   background: rgba(53, 51, 38, 0.85); /* Granite Shadows semi transparan */
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.logo-text {
+  color: rgb(237, 217, 183); /* Ivory */
+  font-weight: bold;
+  font-size: 22px;
 }
 
 .navbar ul {
@@ -41,24 +60,107 @@ body {
   transition: color 0.3s;
 }
 
-.navbar ul li a:hover {
+.navbar ul li a:hover,
+.navbar ul li a.active {
   color: rgb(239, 213, 149); /* Summit Blush */
 }
 
-.logo-container {
+/* ============ Bagian Kategori Atas ============ */
+.kategori-container {
+  background-color: #edd9b7;
+  padding: 50px 0;
+}
+
+.kategori-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 120px);
+  grid-gap: 40px 60px;
+  justify-content: center;
+}
+
+.kategori-item {
+  width: 120px;
+  height: 120px;
+  background-color: #897e45;
+  color: white;
+  border-radius: 50%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ============ Bagian Detail Hewan ============ */
+.detail-container {
+  background-color: #897e45;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.judul-kategori {
+  color: #edd9b7;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.hewan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   align-items: center;
 }
 
-.logo-img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  border-radius: 50%;
+.hewan-box {
+  background-color: #edd9b7;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
 }
 
-.logo-text {
-  color: rgb(237, 217, 183);
-  font-weight: bold;
-  font-size: 22px;
+.foto-hewan {
+  background-color: #f6b157;
+  color: #353326;
+  width: 90px;
+  height: 90px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* agar gambar tidak keluar dari sudut bulat */
+}
+
+.foto-hewan img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* menyesuaikan ukuran tanpa distorsi */
+  border-radius: 15px;
+}
+
+.desk-hewan {
+  color: #353326;
+  text-align: left;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+  .kategori-grid {
+    grid-template-columns: repeat(2, 100px);
+  }
+
+  .hewan-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .desk-hewan {
+    text-align: center;
+  }
 }
