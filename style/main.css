@@ -358,3 +358,135 @@ body {
     font-size: 22px;
   }
 }
+
+
+.documentary {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.documentary-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.documentary {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  padding: 6rem 0;
+  background-color: rgb(237, 217, 231);
+  transition: background-color 0.25s ease;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+
+.documentary-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+.documentary-header h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.documentary-title {
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 1rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 650px) {
+  .documentary-title {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
+.documentary-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+} 
+
+.documentary-header h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 1000px;
+  height: 4px;
+  background-color: #4CAF50;
+  margin: 0 auto;
+}
+
+.documentary-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .documentary-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.video-wrapper {
+  width: 100%;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+  border-radius: 55px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-top: 60px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 55px;
+}
+
+.documentary-description {
+  padding: 1rem;
+}
+
+.documentary-description p {
+  margin-bottom: 1.5rem;
+  line-height: 2.0;
+  color: #555;
+}
+
+.documentary-description ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.documentary-description li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.documentary-description strong {
+  color: #333;
+}
