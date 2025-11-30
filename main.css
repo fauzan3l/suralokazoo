@@ -319,10 +319,6 @@ body {
   color: rgb(239, 213, 149);
 }
 
-[data-aos="zoom-in"] {
-  transition-timing-function: ease-out-back;
-}
-
 @media (max-width: 768px) {
   .team-card {
     width: 160px;
@@ -334,7 +330,6 @@ body {
     font-size: 22px;
   }
 }
-
 
 .documentary {
   padding: 4rem 2rem;
@@ -466,6 +461,7 @@ body {
 .documentary-description strong {
   color: #333;
 }
+
 /* Event CSS */
 
 * {
@@ -667,6 +663,8 @@ body {
     text-align: center;
   }
 }
+
+/* Kontak CSS */
 
 /* Keyframes Animations */
 
