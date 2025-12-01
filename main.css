@@ -665,6 +665,17 @@ body {
 }
 
 /* Kontak CSS */
+.fasilitas {
+  float: left;
+  padding: 15px 5%;
+  margin-top:60px;
+  color: black;
+  transition: 0.3s ease;
+}
+
+.fasilitas-sovenir{
+  
+}
 
 /* Keyframes Animations */
 
