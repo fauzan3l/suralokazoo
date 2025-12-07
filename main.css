@@ -665,6 +665,153 @@ body {
 }
 
 /* Kontak CSS */
+.fasilitas {
+  background-color: #f6b157;
+  padding: 60px 20px;
+  text-align: center;
+  color: #444;
+}
+
+.fasilitas h2{
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.fasilitas-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fasilitas.card{
+  background: #444;
+  color: #333;
+  border-radius: 25px;
+  padding: 25px 20px 30px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform.3s ease, box-shadow .3s ease;
+}
+
+.fasilitas.card:hover{
+  transform: translateY(-6px) scale(1,0 1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.fasilitas-item{
+  width: 110px;
+  height: 110px;
+  background-color: #edd9b7;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fasilitas-item img{
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.fasilitas.card h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.fasilitas.card p{
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.btn-selengkapnya{
+  display: inline-block;
+  margin-top: 50px;
+  background-color: #edd9b7;
+  color: #333;
+  padding: 14px 50px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: .3s ease;
+}
+
+.btn-selengkapnya:hover{
+  background-color: #897e45;
+}
+
+.kontak{
+  background-color: #edd9b7;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.kontak-info{
+  background-color: #f6b157;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.kontak-info img{
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.kontak-info h3{
+  font-size: 20px;
+  margin: 15px 0 5px;
+  text-transform: capitalize;
+}
+
+.kontak-info p{
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.connect{
+  background-color: #f6b157;
+  color: #444;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.connect h3{
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.connect p{
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media(max-width: 768px){
+  .fasilitas h2{
+    font-size: 30px;
+  }
+
+  .navbar{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar ul{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
 /* Keyframes Animations */
 
