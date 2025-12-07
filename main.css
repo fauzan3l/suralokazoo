@@ -463,30 +463,31 @@ body {
 }
 
 /* Event CSS */
-
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
+/* Section event */
 .event-section {
-  background-color: #fcb64d;
+  background-color: #edd9b7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 20px;
+  padding: 120px 60px 80px;
 }
 
 .section-title {
   font-size: 3rem;
   font-weight: 700;
   color: #000;
-  margin-bottom: 50px;
+  margin-bottom: 30px; 
 }
 
+/* Container */
 .event-container {
   position: relative;
   display: flex;
@@ -494,59 +495,41 @@ body {
   justify-content: center;
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .arrow {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: 0.3s;
+  display: none !important;
 }
 
-.arrow:hover {
-  background-color: #333;
-}
-
-.arrow.left {
-  position: absolute;
-  left: 0;
-}
-
-.arrow.right {
-  position: absolute;
-  right: 0;
-}
-
+/* Baris kartu */
 .event-cards {
   display: flex;
   gap: 30px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
   padding: 0 70px;
-}
-
-.event-cards::-webkit-scrollbar {
-  display: none;
+  width: 100%;
+  overflow: hidden;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .event-card {
+  flex: 0 0 calc((100% - 90px) / 4);
+  max-width: calc((100% - 90px) / 4);
   background-color: #fff;
-  width: 250px;
   height: 320px;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 20px;
+  box-sizing: border-box;
 }
 
+/* gambar */
 .image-placeholder {
   background-color: #d1d5db;
   width: 100%;
@@ -557,13 +540,25 @@ body {
   justify-content: center;
   color: #555;
   font-weight: 500;
+  overflow: hidden; 
 }
 
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px; 
+}
+
+/* judul event */
 .event-name {
   font-weight: 700;
   color: #000;
-  margin-bottom: 10px;
+  margin-top: 12px;
+  text-align: center;
 }
+
 /* Hewan CSS */
 
 .kategori-container {
@@ -666,6 +661,7 @@ body {
 
 /* Kontak CSS */
 .fasilitas {
+<<<<<<< HEAD
   background-color: #f6b157;
   padding: 60px 20px;
   text-align: center;
@@ -811,6 +807,13 @@ body {
     flex-wrap: wrap;
     justify-content: center;
   }
+=======
+  float: left;
+  padding: 15px 5%;
+  margin-top:60px;
+  color: black;
+  transition: 0.3s ease;
+>>>>>>> 78e51e22dc92968fba7455e5a41e2df2f318b2b5
 }
 
 /* Keyframes Animations */
