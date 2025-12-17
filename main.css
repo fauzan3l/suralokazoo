@@ -822,6 +822,10 @@ body {
   line-height: 1.6;
 }
 
+.icon{
+  
+}
+
 @media(max-width: 768px){
   .fasilitas h2{
     font-size: 30px;
