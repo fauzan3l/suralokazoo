@@ -700,6 +700,7 @@ body {
 .fasilitas h2{
   font-size: 42px;
   font-weight: 800;
+  padding-top: 60px;
   margin-bottom: 40px;
   text-transform: uppercase;
 }
