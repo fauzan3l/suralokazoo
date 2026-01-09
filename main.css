@@ -28,11 +28,16 @@ body {
 .navbar ul {
   list-style: none;
   display: flex;
+  align-items: center;
 }
 
-.navbar ul li {
+.navbar ul > li {
   margin-left: 25px;
   position: relative;
+}
+
+.navbar ul > li:last-child {
+  margin-left: 0px;
 }
 
 .navbar ul li a {
